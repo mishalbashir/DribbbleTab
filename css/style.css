@@ -1,0 +1,52 @@
+body {
+    background-color: white;
+}
+
+#TopBar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left:0;
+  height: 50px;
+  /* Top Bar: */
+background: #FFFFFF;
+box-shadow: 0 1px 4px 0 rgba(0,0,0,0.50);
+}
+
+#Info {
+  position: relative;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+#BarText-Selected {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  width: auto;
+  height:auto;
+  display: inline-block;
+  align-items: center;
+  vertical-align: middle;
+}
+
+#BarText-Unselected{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #999999;
+  width: auto;
+  height:auto;
+  display: inline-block;
+  align-items: center;
+  vertical-align: middle;
+}
+
+#Logo{
+  position:relative;
+  display:inline-block;
+  padding-left: 20px;
+  vertical-align: middle;
+}
