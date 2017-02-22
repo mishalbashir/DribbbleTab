@@ -57,9 +57,10 @@ box-shadow: 0 1px 4px 0 rgba(0,0,0,0.50);
 
 #ItemArea{
   width: 100%;
+  height: auto;
   margin: auto;
   margin-bottom: 0px;
-/* rudimentary way of spacing from the TopBar */
+/* rudimentary way of spacing from the TopBar, getting the shadow just right */
   margin-top: 44px;
   display: inline-block;
 }
@@ -71,5 +72,4 @@ box-shadow: 0 1px 4px 0 rgba(0,0,0,0.50);
   float: left;
   background-color: white;
   display: inline-block;
-
 }
