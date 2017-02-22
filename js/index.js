@@ -8,12 +8,16 @@ $.ajax ({
   $.each(shots, function(index, shot) {
     console.log(shot.images.hidpi);
     //  console.log(shot.images);
+      shotUrl = shot.html_url;
+    //  console.log(shot.images.html_url);
       shotView = shot.images.hidpi;
       if (shotView == null) {
         shotView = shot.images.normal;
       };
-
-      $('#ItemArea').append('<img class="Items" height=auto src="' + shotView + '" />')
+//      $('#ItemArea').append('<img class="Items" src="' + shotView + '" />')
+//     This line gets a dribbble shot, creates a div for it, and then wraps it inside a clickable link
+      $('#ItemArea').append('<div class ="Items"> <a href ="' + shotUrl + '"> <img width= "' + ItemsWidth +'%" height = auto src="' + shotView + '" /> </a> </div>')
+//      $('.Items').wrapInner('<a href ="' + shotUrl + '"></a>')
     });
   }
 

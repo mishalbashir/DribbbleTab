@@ -2,6 +2,10 @@ body {
     background-color: white;
 }
 
+a{
+  text-decoration: none;
+}
+
 #TopBar {
   position: fixed;
   width: 100%;
@@ -55,14 +59,17 @@ box-shadow: 0 1px 4px 0 rgba(0,0,0,0.50);
   width: 100%;
   margin: auto;
   margin-bottom: 0px;
-  margin-top: 0px;
+/* rudimentary way of spacing from the TopBar */
+  margin-top: 44px;
+  display: inline-block;
 }
 
 
 .Items {
   width: 25%;
+  height: auto;
+  float: left;
   background-color: white;
   display: inline-block;
-  margin-top: 5px;
 
 }
