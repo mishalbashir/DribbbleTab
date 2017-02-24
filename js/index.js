@@ -1,23 +1,13 @@
 var ItemsWidth = 100;
 perPage = 48;
 
-//sort items by various parameters
-/*
-function getSorted(selector, attrName) {
-    return $($(selector).toArray().sort(function(a, b){
-        var aVal = parseInt(a.getAttribute(attrName)),
-            bVal = parseInt(b.getAttribute(attrName));
-        return aVal - bVal;
-    }));
-}
-*/
+
 // function to get needed data from Dribbble
 $.ajax ({
   type:'GET',
   url: 'https://api.dribbble.com/v1/shots/?access_token=6c702277ce2fe998664aaf09b8359e2022b4ce809429a73f2bfe17b34205ca52',
   data: {per_page: perPage},
   success: function (shots) {
-
     //get shot urls for image population
     $.each(shots, function(index, shot) {
         var shotViewsNumber = shot.views_count;
@@ -30,8 +20,35 @@ $.ajax ({
       };
 
 //     This line gets a dribbble shot, creates a div for it, and then wraps it inside a clickable link
-        $('#ItemArea').append('<div data-sort="' + shotViewsNumber + '" class ="Items"> <a href ="' + shotUrl + '"> <img width= "' + ItemsWidth +'%" height = auto src="' + shotView + '" /> </a> </div>')
+        $('#ItemArea').append('<div class ="Items"> <a href ="' + shotUrl + '"> <img width= "' + ItemsWidth +'%" height = auto src="' + shotView + '" /> </a> </div>')
     });
+
+  },
+
+/*
+  error:function (){
+
   }
+*/
+
+});
+
+$.ajax ({
+  type:'GET',
+  url: 'https://api.dribbble.com/v1/shots/?access_token=6c702277ce2fe998664aaf09b8359e2022b4ce809429a73f2bfe17b34205ca52',
+  data: {per_page: perPage},
+  success: function (shots) {
+
+$( "#MostViews" ).click(function(event){
+
+  console.log("ayylmao");
+// sort by views
+  shots.sort(function(a, b) {
+    return a.views_count - b.views_count;
+  });
+
+});
+
+}
 
 });
